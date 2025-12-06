@@ -94,9 +94,71 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>STORM</h1>
-        <div className="subtitle">從廣泛搜尋到精確報告的 AI 知識熔爐</div>
+        <h1>AI Agent Pattern</h1>
       </header>
+
+      {/* Comparison Table */}
+      <div className="comparison-section">
+        <h3 style={{ color: 'var(--primary)', textAlign: 'center' }}>AI Agent 工程選型黃金法則</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>模式</th>
+              <th>適用場景</th>
+              <th>核心特點</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://ai-coding.wiselychen.com/agent-mo-shi-part-1-workflow-xing-he-react-xing-shui-geng-xiang-ni/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--primary)' }}>
+                  ReAct
+                </a>
+              </td>
+              <td style={{ textAlign: 'left' }}>適合高密度交互或動態資訊檢索的場景，如 Chatbot、遊戲 NPC。</td>
+              <td style={{ textAlign: 'left' }}>具備極強的環境感知與即時應變能力，強調邊想邊做。但容易陷入局部最優解，且頻繁調用成本較高。</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://ai-coding.wiselychen.com/mang-mu-jia-su-vs-du-zhu-lu-shu-pao-wei-shi-mo-ai-agent-xu-yao-plan-exec-mo-shi/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--primary)' }}>
+                  Plan and Exec
+                </a>
+              </td>
+              <td style={{ textAlign: 'left' }}>適合步驟繁瑣的長程任務，如旅遊規劃或自動化編碼。</td>
+              <td style={{ textAlign: 'left' }}>強制先行全局規劃，避免迷失方向與局部最優。執行階段可用小模型降低成本，但對突發狀況應變力較弱。</td>
+            </tr>
+            <tr className="highlight-row">
+              <td>Storm</td>
+              <td>深度研究報告</td>
+              <td>多專家協作，引用精準</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://ai-coding.wiselychen.com/deep-research-linkedin-draft/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--primary)' }}>
+                  Plan, Exec, Critic(Reflexion)
+                </a>
+              </td>
+              <td style={{ textAlign: 'left' }}>適合高風險或零容錯的領域，如 Deep Research、醫療決策、法律諮詢或複雜邏輯驗證。</td>
+              <td style={{ textAlign: 'left' }}>引入 System 2 慢思考機制，透過自我批判與反覆驗證來確保正確性。雖然響應較慢且成本高，但能產出最高品質的結果。</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://ai-coding.wiselychen.com/agent-part-3-interleaved-thinking-cheng-xian-de-wen-ding-xing-shi-xian-zai-agentluo-di-de-zhong-yao-guan-jian/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--primary)' }}>
+                  Interleaved Thinking
+                </a>
+              </td>
+              <td style={{ textAlign: 'left' }}>適合需長期穩定運行的複雜任務，如大型專案代碼生成、全自動化工作流。</td>
+              <td style={{ textAlign: 'left' }}>思考與執行交錯進行（Think-Act-Verify Loop），邊做邊修正。穩定性極高，適合無人值守任務，但成本與耗時顯著增加。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* STORM Section */}
+      <div style={{ marginTop: '4rem' }}>
+        <h2 style={{ color: 'var(--primary)', textAlign: 'center', fontSize: '2.5rem', marginBottom: '0.5rem' }}>AI Agent Pattern : STORM</h2>
+        <div style={{ textAlign: 'center', color: '#aaa', fontSize: '1.2rem', marginBottom: '2rem' }}>從廣泛搜尋到精確報告的 AI 知識熔爐</div>
+      </div>
 
       {/* The Funnel */}
       <div className="funnel-wrapper">
@@ -156,40 +218,7 @@ function App() {
       )}
 
       {/* Comparison Table */}
-      <div className="comparison-section">
-        <h3 style={{ color: 'var(--primary)', textAlign: 'center' }}>工程選型黃金法則</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>模式</th>
-              <th>適用場景</th>
-              <th>核心特點</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ReAct</td>
-              <td>即時交互 (遊戲 NPC)</td>
-              <td>反應快，行動導向</td>
-            </tr>
-            <tr>
-              <td>Plan-and-Solve</td>
-              <td>複雜流程 (電商大促)</td>
-              <td>步驟規劃，執行力強</td>
-            </tr>
-            <tr className="highlight-row">
-              <td>Storm</td>
-              <td>深度研究報告</td>
-              <td>多專家協作，引用精準</td>
-            </tr>
-            <tr>
-              <td>Reflexion</td>
-              <td>代碼/數學驗證</td>
-              <td>自我反思，除錯能力強</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
 
     </div>
   );
